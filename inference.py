@@ -7,12 +7,13 @@ fit h0 and w based on Expectation Reflection
 input: features x[l,n], target: y[l]
  output: h0, w[n]
 """
-def fit(x,y,niter_max=100):    
+def fit(x,y,niter_max=100,regu=0.1):    
     n = x.shape[1]
     
     x_av = np.mean(x,axis=0)
     dx = x - x_av
     c = np.cov(dx,rowvar=False,bias=True)
+    c += regu*np.identity(n)
     c_inv = linalg.inv(c)
 
     # initial values
