@@ -1,9 +1,9 @@
-Expectation Relection for Diabetes Diagnosis
+Expectation Reflection for Diabetes Diagnosis
 ===============================================
 
 Data sets
 -----------------------------
-This data concists of 768 samples on female patients at least 21 years old of Pima Indian Heritage, collecting by the National Institutes of National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health (NIH), USA.
+These data concist of 768 samples on female patients at least 21 years old of Pima Indian Heritage, collected by the National Institutes of National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health (NIH), USA.
 
 8 features:
 
