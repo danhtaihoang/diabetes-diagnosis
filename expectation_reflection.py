@@ -7,7 +7,9 @@ fit h0 and w based on Expectation Reflection
 input: features x[l,n], target: y[l]
  output: h0, w[n]
 """
-def fit(x,y,niter_max=100,regu=0.1):    
+def fit(x,y,niter_max=500,regu=0.1):
+    #print(niter_max)    
+
     n = x.shape[1]
     
     x_av = np.mean(x,axis=0)
@@ -44,3 +46,17 @@ def fit(x,y,niter_max=100,regu=0.1):
         h0 = h_av - x_av.dot(w)
         
     return h0,w
+
+""" --------------------------------------------------------------------------------------
+calculate probability p based on x,h0, and w
+input: x[l,n], w[n], h0
+output: p[l]
+"""
+def predict(x,h0,w):
+    #h = h0 + x.dot(w)
+    #p = 1/(1+np.exp(-2.*h))
+    #return p
+    return np.sign(h0 + x.dot(w))
+
+
+
